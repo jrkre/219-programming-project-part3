@@ -1,13 +1,12 @@
 ## Project Part 1 For CS219: Computer Organization
-> describe the project here (What are you designing)?
+
 This project is the first iteration of a project meant to emulate an ARM processor by taking in instructions in a text file.
 
-[![WSL Version][wsl-image]][https://docs.microsoft.com/en-
-us/windows/wsl/install]
 This software is designed as is for an in class project.
 ## Installation
-> Install Linux or the windows subsystem
-This project was developed on a linux machine, and currently the most reliable way to use it is on linux.
+> Install Linux or the windows subsystem.
+> 
+> This project was developed on a linux machine, and currently the most reliable way to use it is on linux.
 
 Steps:
 
@@ -21,9 +20,6 @@ Steps:
 > ./project1 Programming-Project-1.txt
 ```
 ## Development setup
-Describe how to install all development dependencies and how to run an 
-automated test-suite of some kind. Potentially do this for multiple 
-platforms.
 ```sh
 sudo apt-add-repository ppa:ubuntu-desktop/ubuntu-make
 sudo apt-get update
@@ -37,7 +33,7 @@ Joshua Knight - joshuaknight@nevada.unr.edu
 Distributed under the MIT license. See ``LICENSE`` for more information.
 [Github](github goes here)
 ## Contributing
-1. Fork it (<github fork>)
+1. Fork Branch
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
@@ -50,6 +46,5 @@ Thank you Shawn Ray for the README example. It was very helpful for finally lear
 * https://refactoring.guru/design-patterns/command/cpp/example
 * https://stackoverflow.com/questions/20519576/hex-addition-in-c
 <!-- Markdown link & img dfn's -->
-[wsl-image]: https://www.techrepublic.com/a/hub/i/2016/01/27/e0e94fb7-
-d058-4d62-8027-c497e7c0e069/ubuntuhero.jpg
+[wsl-image]: https://www.techrepublic.com/a/hub/i/2016/01/27/e0e94fb7-d058-4d62-8027-c497e7c0e069/ubuntuhero.jpg
 
