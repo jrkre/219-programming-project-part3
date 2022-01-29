@@ -44,10 +44,11 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 5. Create a new Pull Request
   
 ## Acknowlegemnets
-Thank you Shawn Ray for the README example. It was very helpful for finally learning how to do a compitent README.
+Thank you Shawn Ray for the README example. It was very helpful for finally learning how to do a competent README.
+  
   Helpful Links:
-  * https://refactoring.guru/design-patterns/command/cpp/example
-  * https://stackoverflow.com/questions/20519576/hex-addition-in-c
+* https://refactoring.guru/design-patterns/command/cpp/example
+* https://stackoverflow.com/questions/20519576/hex-addition-in-c
 <!-- Markdown link & img dfn's -->
 [wsl-image]: https://www.techrepublic.com/a/hub/i/2016/01/27/e0e94fb7-
 d058-4d62-8027-c497e7c0e069/ubuntuhero.jpg
