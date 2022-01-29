@@ -6,7 +6,7 @@ This software is designed as is for an in class project.
 ## Installation
 > Install Linux or the windows subsystem.
 > 
-> This project was developed on a linux machine, and currently the most reliable way to use it is on linux.
+> This project was developed on a linux machine running Manjaro, and currently the only way it has been tested is in linux.
 
 Steps:
 
