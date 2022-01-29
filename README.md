@@ -1,4 +1,4 @@
-## Project part 1 For Cs219 Computer Organization
+## Project Part 1 For CS219: Computer Organization
 > describe the project here (What are you designing)?
 This project is the first iteration of a project meant to emulate an ARM processor by taking in instructions in a text file.
 
