@@ -2,6 +2,11 @@
 #define LOGICAL_SHIFT_LEFT_H
 #include "Command.h"
 
+
+/**
+ * @brief impliments the "LSL" operation using the Command design pattern
+ * 
+ */
 class LogicalShiftLeft : public Command
 {
     std::string arg1;

@@ -14,6 +14,12 @@
 #include "src/Xor.h"
 
 
+/**
+ * @brief This file acts as an in-between between the driver and the
+ * code of this project. It handles the parsing of the file into 
+ * commands that are then computed for a result.
+ * 
+ */
 class File
 {
 private:

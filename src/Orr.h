@@ -2,6 +2,10 @@
 #define ORR_H
 #include "Command.h"
 
+/**
+ * @brief impliments the "ORR" operation using the Command design pattern
+ * 
+ */
 class Orr : public Command
 {
     std::string arg1;

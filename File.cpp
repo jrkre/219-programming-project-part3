@@ -33,6 +33,11 @@ int File::getTotalCommands()
     return totalCommands;
 }
 
+/**
+ * @brief splits each line in the file into it's own string *
+ * 
+ * @return std::string* 
+ */
 std::string * File::splitCommands()
 {   
     //Command counter

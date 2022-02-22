@@ -2,6 +2,10 @@
 #define XOR_H
 #include "Command.h"
 
+/**
+ * @brief impliments the "XOR" operation using the Command design pattern
+ * 
+ */
 class Xor : public Command
 {
     std::string arg1;

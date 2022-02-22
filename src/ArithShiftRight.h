@@ -2,6 +2,11 @@
 #define ARITH_SHIFT_RIGHT_H
 #include "Command.h"
 
+
+/**
+ * @brief impliments the "ASR" operation using the Command design pattern
+ * 
+ */
 class ArithShiftRight : public Command
 {
     std::string arg1;

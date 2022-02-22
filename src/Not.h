@@ -2,6 +2,10 @@
 #define NOT_H
 #include "Command.h"
 
+/**
+ * @brief impliments the "NOT" operation using the Command design pattern
+ * 
+ */
 class Not : public Command
 {
     std::string arg1;

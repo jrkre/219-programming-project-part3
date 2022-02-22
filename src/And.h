@@ -3,6 +3,10 @@
 #include "Command.h"
 #include <iostream>
 
+/**
+ * @brief impliments the "AND" operation using the Command design pattern
+ * 
+ */
 class And : public Command
 {
 

@@ -2,6 +2,10 @@
 #define SUBTRACT_H
 #include "Command.h"
 
+/**
+ * @brief impliments the "SUB" operation using the Command design pattern
+ * 
+ */
 class Subtract : public Command
 {
     std::string arg1;

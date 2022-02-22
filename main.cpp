@@ -1,6 +1,14 @@
 #include "File.h"
 #include "src/Command.h"
 
+/**
+ * @brief main driver of the program
+ * 
+ * @param argc 
+ * @param argv 
+ * @return int 
+ */
+
 int main(int argc, char *argv[])
 {
 
@@ -16,6 +24,8 @@ int main(int argc, char *argv[])
 	}
 	// Make a new file
     File file = File(input);
+
+	std::cout << "File Loaded!" << std::endl;
 
 	//split the file into an array of string "operations"
 	std::string * array = file.splitCommands();
