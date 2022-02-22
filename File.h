@@ -3,7 +3,15 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include "Add.h"
+#include "src/Add.h"
+#include "src/And.h"
+#include "src/ArithShiftRight.h"
+#include "src/LogicalShiftRight.h"
+#include "src/LogicalShiftLeft.h"
+#include "src/Not.h"
+#include "src/Orr.h"
+#include "src/Subtract.h"
+#include "src/Xor.h"
 
 
 class File

@@ -13,13 +13,6 @@ class Add : public Command {
 private:
 
     /**
-     * @brief plaintext string of the command 
-     * - should never be anything besides "ADD"
-     * 
-     */
-    std::string commandString;
-
-    /**
      * @brief plaintext string of operand 1 in the command in hexadecimal format
      * 
      */
@@ -51,7 +44,7 @@ public:
      * @param arg1 
      * @param arg2 
      */
-    Add(std::string commandString, std::string arg1, std::string arg2);
+    Add(std::string arg1, std::string arg2);
 
     /**
      * @brief adds the two arguments arg1 and arg2 with a safety check 
@@ -61,13 +54,6 @@ public:
      */
     std::string addParams();
 
-    /**
-     * @brief convert an integer to a hex string
-     * 
-     * @param in integer to be converted
-     * @return std::string hex representation of integer
-     */
-    std::string intToHex(u_int32_t in);
 
     /**
      * @brief DEPRICATED - reverses a string passed in
@@ -76,15 +62,7 @@ public:
      * @return std::string reversed string
      */
     std::string reverseString(std::string input);
-
-
-    /**
-     * @brief Converts a hex string into an integer
-     * 
-     * @param hex string in hexadecimal format - preceded by "0x"
-     * @return int hex nuber in integer format
-     */
-    int hexToInt(std::string hex);
+    
 
 
     /**

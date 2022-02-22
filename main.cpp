@@ -1,6 +1,5 @@
 #include "File.h"
-#include "Command.h"
-#include "Add.h"
+#include "src/Command.h"
 
 int main(int argc, char *argv[])
 {
@@ -12,7 +11,8 @@ int main(int argc, char *argv[])
 	}
 	else 
 	{
-		input = "";
+		std::cout << "Please input a file name: ";
+		std::cin >> input;
 	}
 	// Make a new file
     File file = File(input);

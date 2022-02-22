@@ -73,17 +73,64 @@ std::string * File::splitCommands()
     return rString;
 }
 
+/**
+ * @brief Chooses the correct command based off the first word on the line.
+ * 
+ * @param commandString 
+ * @param arg1 
+ * @param arg2 
+ * @return Command* pointer to the correct command to be executed.
+ */
 Command * chooseCommand(std::string commandString, std::string arg1, std::string arg2)
 {
     if (commandString == "ADD")
     {
-        Add * add = new Add(commandString, arg1, arg2);
+        Add * add = new Add(arg1, arg2);
         return add;
     }
-    else 
+    else if(commandString == "AND")
     {
-        //idk what to return here yet 
-        // - when theres more operations later hopefully it will make sense
+        And * thing = new And(arg1, arg2);
+        return thing;
+    }
+    else if (commandString == "ASR")
+    {
+        ArithShiftRight * thing = new ArithShiftRight(arg1,arg2);
+        return thing;
+    }
+    else if (commandString == "LSR")
+    {
+        LogicalShiftRight * thing = new LogicalShiftRight(arg1,arg2);
+        return thing;
+    }
+    else if (commandString == "LSL")
+    {
+        LogicalShiftLeft * thing = new LogicalShiftLeft(arg1,arg2);
+        return thing;
+    }
+    else if (commandString == "NOT")
+    {
+        Not * thing = new Not(arg1,arg2);
+        return thing;
+    }
+    else if (commandString == "ORR")
+    {
+        Orr * thing = new Orr(arg1, arg2);
+        return thing;
+    }
+    else if (commandString == "SUB")//to my OF owo
+    {
+        Subtract * thing = new Subtract(arg1, arg2);
+        return thing;
+    }
+    else if (commandString == "XOR")
+    {
+        Xor * thing = new Xor(arg1, arg2);
+        return thing;
+    }
+    else
+    {
+        return nullptr;
     }
 }
 

@@ -4,8 +4,8 @@ CXX_FLAGS = -g -Wall -std=c++11
 
 TARGET = project1
 
-HEADERS = File.h Command.h Add.h
-SRCS = File.cpp Add.cpp main.cpp
+HEADERS = File.h src/Add.h src/And.h src/ArithShiftRight.h src/LogicalShiftRight.h src/LogicalShiftLeft.h src/Not.h src/Orr.h src/Subtract.h src/Xor.h
+SRCS = File.cpp src/Add.cpp src/And.cpp src/ArithShiftRight.cpp src/LogicalShiftRight.cpp src/LogicalShiftLeft.cpp src/Not.cpp src/Orr.cpp src/Subtract.cpp src/Xor.cpp main.cpp
 
 OBJECTS := $(patsubst %.cpp,%.o,$(SRCS))
 
@@ -21,3 +21,4 @@ $(TARGET): $(OBJECTS)
 
 clean:
 	-rm -f *.o
+	-rm -f src/*.o
