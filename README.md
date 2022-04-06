@@ -17,7 +17,7 @@ Steps:
 > Navigate to build folder
 ```
 > make
-> ./project1 Programming-Project-1.txt
+> ./project1 test-part-3.txt
 ```
 ## Development setup
 ```sh
