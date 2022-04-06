@@ -1,12 +1,13 @@
-#ifndef ORR_H
-#define ORR_H
+#ifndef MOVE_H
+#define MOVE_H
 #include "Command.h"
 
+
 /**
- * @brief impliments the "ORR" operation using the Command design pattern
+ * @brief impliments the "LSL" operation using the Command design pattern
  * 
  */
-class Orr : public Command
+class Move : public Command
 {
     std::string rString;
     std::string arg1;
@@ -15,8 +16,8 @@ class Orr : public Command
     uint32_t iArg2;
 
 public:
-    Orr();
-    Orr(std::string arg1, std::string arg2, std::string rString);
+    Move();
+    Move(std::string arg1, std::string arg2, std::string rString);
 
     std::string getRString();
 

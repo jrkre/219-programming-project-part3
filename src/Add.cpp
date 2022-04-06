@@ -1,15 +1,16 @@
 #include "Add.h"
 
 
-Add::Add(std::string arg1, std::string arg2)
+Add::Add(std::string arg1, std::string arg2, std::string rString)
 {
+    Add::rString = rString;
     Add::arg1 = arg1;
     Add::arg2 = arg2;
     iArg1 = hexToInt(arg1);
     iArg2 = hexToInt(arg2);
 }
 
-std::string Add::addParams() 
+std::string Add::addParams()
 {
     if ((long)iArg1 + iArg2 > 4294967295)
     {

@@ -1,6 +1,6 @@
-## Project Part 1 For CS219: Computer Organization
+## Project Part 3 For CS219: Computer Organization
 
-This project is the first iteration of a project meant to emulate an ARM processor by taking in instructions in a text file.
+This project is the third iteration of a project meant to emulate an ARM processor by taking in instructions in a text file. It emulates loading and operating on registers as opposed to immediate operands.
 
 This software is designed as is for an in class project.
 ## Installation

@@ -1,6 +1,7 @@
 #include "File.h"
 
 
+
 File::File()
 {
     
@@ -78,6 +79,8 @@ std::string * File::splitCommands()
     return rString;
 }
 
+
+
 /**
  * @brief Chooses the correct command based off the first word on the line.
  * 
@@ -86,51 +89,75 @@ std::string * File::splitCommands()
  * @param arg2 
  * @return Command* pointer to the correct command to be executed.
  */
-Command * chooseCommand(std::string commandString, std::string arg1, std::string arg2)
+Command * File::chooseCommand(std::string commandString, std::string rString, std::string arg1, std::string arg2)
 {
+    
+    if (commandString == "MOV")
+    {
+        Move * thing = new Move (arg1, arg2, rString);
+        registers.loadRegister(rString, Command::hexToInt(thing->execute()));
+        return thing;
+    }
+    
+    uint32_t rn = registers.getRegister(arg2);
+    arg2 = Command::intToHex(rn);
+    if (arg1 != "")
+    {
+        arg1 = Command::intToHex(registers.getRegister(arg1));
+    }
+
     if (commandString == "ADD")
     {
-        Add * add = new Add(arg1, arg2);
+        Add * add = new Add(arg1, arg2, rString);
+        registers.loadRegister(rString, Command::hexToInt(add->execute()));
         return add;
     }
     else if(commandString == "AND")
     {
-        And * thing = new And(arg1, arg2);
+        And * thing = new And(arg1, arg2, rString);
+        registers.loadRegister(rString, Command::hexToInt(thing->execute()));
         return thing;
     }
     else if (commandString == "ASR")
     {
-        ArithShiftRight * thing = new ArithShiftRight(arg1,arg2);
+        ArithShiftRight * thing = new ArithShiftRight(arg1,arg2, rString);
+        registers.loadRegister(rString, Command::hexToInt(thing->execute()));
         return thing;
     }
     else if (commandString == "LSR")
     {
-        LogicalShiftRight * thing = new LogicalShiftRight(arg1,arg2);
+        LogicalShiftRight * thing = new LogicalShiftRight(arg1,arg2, rString);
+        registers.loadRegister(rString, Command::hexToInt(thing->execute()));
         return thing;
     }
     else if (commandString == "LSL")
     {
-        LogicalShiftLeft * thing = new LogicalShiftLeft(arg1,arg2);
+        LogicalShiftLeft * thing = new LogicalShiftLeft(arg1,arg2, rString);
+        registers.loadRegister(rString, Command::hexToInt(thing->execute()));
         return thing;
     }
     else if (commandString == "NOT")
     {
-        Not * thing = new Not(arg1,arg2);
+        Not * thing = new Not(arg1,arg2, rString);
+        registers.loadRegister(rString, Command::hexToInt(thing->execute()));
         return thing;
     }
     else if (commandString == "ORR")
     {
-        Orr * thing = new Orr(arg1, arg2);
+        Orr * thing = new Orr(arg1, arg2, rString);
+        registers.loadRegister(rString, Command::hexToInt(thing->execute()));
         return thing;
     }
-    else if (commandString == "SUB")//to my OF owo
+    else if (commandString == "SUB")
     {
-        Subtract * thing = new Subtract(arg1, arg2);
+        Subtract * thing = new Subtract(arg1, arg2, rString);
+        registers.loadRegister(rString, Command::hexToInt(thing->execute()));
         return thing;
     }
     else if (commandString == "XOR")
     {
-        Xor * thing = new Xor(arg1, arg2);
+        Xor * thing = new Xor(arg1, arg2, rString);
+        registers.loadRegister(rString, Command::hexToInt(thing->execute()));
         return thing;
     }
     else
@@ -138,6 +165,7 @@ Command * chooseCommand(std::string commandString, std::string arg1, std::string
         return nullptr;
     }
 }
+
 
 std::vector<Command*> File::parseToCommands(std::string * input)
 {
@@ -156,7 +184,7 @@ std::vector<Command*> File::parseToCommands(std::string * input)
         std::string token;
         int tokenCounter = 0;
 
-        std::string buildCommand [3];
+        std::string buildCommand [4];
         while ((pos = search.find(delimiter)) != std::string::npos)
         {
             token = search.substr(0, pos);
@@ -168,9 +196,9 @@ std::vector<Command*> File::parseToCommands(std::string * input)
             search.erase(0, pos + delimiter.length());
         }
 
-        buildCommand[2] = search;
+        buildCommand[3] = search;
 
-        Command *thing = chooseCommand(buildCommand[0], buildCommand[1], buildCommand[2]);
+        Command *thing = chooseCommand(buildCommand[0], buildCommand[1], buildCommand[2], buildCommand[3]);
         commands->push_back(thing);
 
     }

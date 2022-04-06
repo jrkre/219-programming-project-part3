@@ -1,5 +1,6 @@
 #include "File.h"
 #include "src/Command.h"
+#include "Register.h"
 
 /**
  * @brief main driver of the program

@@ -8,14 +8,17 @@
  */
 class Xor : public Command
 {
+    std::string rString;
     std::string arg1;
     std::string arg2;
-    u_int32_t iArg1;
-    u_int32_t iArg2;
+    uint32_t iArg1;
+    uint32_t iArg2;
 
 public:
     Xor();
-    Xor(std::string arg1, std::string arg2);
+    Xor(std::string arg1, std::string arg2, std::string rString);
+
+    std::string getRString();
 
     std::string execute();
 };

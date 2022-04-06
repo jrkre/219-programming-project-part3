@@ -12,6 +12,8 @@
 #include "src/Orr.h"
 #include "src/Subtract.h"
 #include "src/Xor.h"
+#include "src/Move.h"
+#include "Register.h"
 
 
 /**
@@ -42,6 +44,10 @@ private:
      */
     std::string buffer;
 
+
+    Register registers;
+
+    Command * chooseCommand(std::string commandString, std::string rString, std::string arg1, std::string arg2);
 public:
     /**
      * @brief Construct a new File object

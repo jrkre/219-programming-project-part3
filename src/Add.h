@@ -11,6 +11,7 @@
 class Add : public Command {
 
 private:
+    std::string rString;
 
     /**
      * @brief plaintext string of operand 1 in the command in hexadecimal format
@@ -27,24 +28,23 @@ private:
     /**
      * @brief 32-bit integer representation of operand 1
      */
-    u_int32_t iArg1;
+    uint32_t iArg1;
 
     /**
      * @brief 32-bit integer representation of operand 2
      * 
      */
-    u_int32_t iArg2;
+    uint32_t iArg2;
 
 public:
 
     /**
      * @brief Construct a new Add object from parameters
      * 
-     * @param commandString 
      * @param arg1 
      * @param arg2 
      */
-    Add(std::string arg1, std::string arg2);
+    Add(std::string arg1, std::string arg2, std::string rString);
 
     /**
      * @brief adds the two arguments arg1 and arg2 with a safety check 
@@ -53,7 +53,6 @@ public:
      * @return std::string resulting number in hexadecimal form
      */
     std::string addParams();
-
 
     /**
      * @brief DEPRICATED - reverses a string passed in
